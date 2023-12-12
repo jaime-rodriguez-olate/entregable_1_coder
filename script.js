@@ -1,7 +1,13 @@
 console.log("Bienvenidos al sistema de monitoreo en línea");
 
-//Me falta crear una funcion.
-
+//funcion.
+function sumaArrays(arreglox) {
+    let accum = 0;
+    for ( var i = 0; i < arreglox.length; i++) {
+        accum += arreglox[i];
+    }
+    return accum;
+}
 //variables:
 nombre_usuario = prompt("Por favor indicame tu nombre");
 
@@ -22,14 +28,17 @@ else(true)
    if(medicion == 0){
        for(i=0; i< datosElectricos.length;i++)
                console.log(datosElectricos[i])
+    console.log("El total medido es: "+sumaArrays(datosElectricos)+ " Kwh");
    }
     else if(medicion == 1){
         for(i=0; i< datosAgua.length;i++)
-            console.log(datosAgua[i])
+            console.log(datosAgua[i])    
+    console.log("El total medido es: "+sumaArrays(datosAgua)+ " m3");
     }
     else if(medicion == 2){
         for(i=0; i< datosGas.length;i++)
             console.log(datosGas[i])
+    console.log("El total medido es: "+sumaArrays(datosGas)+ " m3");
     }
     else if(medicion == 3){
         nueva_variable = []
